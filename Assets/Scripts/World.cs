@@ -2,7 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomTerrain :MonoBehaviour {
+public class World :MonoBehaviour {
+
+  [Header("Assets")]
+  public MeshFilter   terrainMeshFilter;
+  public MeshRenderer terrainMeshRenderer;
+  public MeshFilter   waterMeshFilter;
+  public MeshRenderer waterMeshRenderer;
+  
 
   [Header("Mesh Properties")]
   public int width         = 10;
@@ -24,48 +31,53 @@ public class CustomTerrain :MonoBehaviour {
   public float lacunarity  = 2;
 
 
-  private Mesh mesh;
+  private Mesh terrainMesh;
   private Texture2D heightMap;
-  private MeshFilter meshFilter;
-  private MeshRenderer meshRenderer;
-
   private float[,] heightMapData;
 
   private void Start() {
-    mesh = new Mesh();
-    heightMap = new Texture2D(width, length);
-    meshFilter =   GetComponent<MeshFilter>();
-    meshRenderer = GetComponent<MeshRenderer>();
-
     offsetX = Random.Range(-1000, 1000);
     offsetY = Random.Range(-1000, 1000);
-    //CreateHeightMap();
+
+    UpdateTerrain();
   }
 
-  private void Update() {
+  public void UpdateTerrain() {
     CreateHeightMap();
-    CreateMesh();
+    CreateTerrain();
   }
 
-  void CreateMesh() {
+  public void OnValidate() {
+    if(Application.isPlaying && heightMap)
+      UpdateTerrain();
+  }
 
+  void CreateTerrain() {
     MeshData meshData = MeshGenerator.GenerateMeshData(width, length, heightMapData, heightScale, heightCurve);
 
-    mesh.Clear(true);
-    mesh.vertices  = meshData.vertices;
-    mesh.uv        = meshData.uvs;
-    mesh.triangles = meshData.triangles;
+    if(!terrainMesh)
+      terrainMesh = new Mesh();
+    else
+      terrainMesh.Clear(true);
 
-    meshFilter.mesh = mesh;
+    terrainMesh.vertices  = meshData.vertices;
+    terrainMesh.uv        = meshData.uvs;
+    terrainMesh.triangles = meshData.triangles;
+
+    terrainMeshFilter.mesh = terrainMesh;
   }
 
   void CreateHeightMap() {
     heightMapData = Noise.PerlinNoise(width, length, scale, offsetX, offsetY, octaves, persistense, lacunarity);
-    heightMap.Resize(width, length);
+
+    if(!heightMap)
+      heightMap = new Texture2D(width, length);
+    else
+      heightMap.Resize(width, length);
 
     TextureGenerator.GenerateTexture(heightMapData, ref heightMap);
-    meshRenderer.sharedMaterial.SetFloat("_HeightScale", heightScale);
-    meshRenderer.sharedMaterial.mainTexture = heightMap;
+    terrainMeshRenderer.sharedMaterial.SetFloat("_HeightScale", heightScale);
+    terrainMeshRenderer.sharedMaterial.mainTexture = heightMap;
   }
 
 }

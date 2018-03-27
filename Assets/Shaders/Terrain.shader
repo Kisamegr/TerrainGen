@@ -30,9 +30,7 @@
 			struct v2f
 			{
 				float2 uv : TEXCOORD0;
-				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
-				float4 color : COLOR;
                 float height : FLOAT;
 			};
 
@@ -44,14 +42,10 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-
-				//v.vertex.y += cos(v.vertex.x) * 0.5 + 0.5;
 				o.height = v.vertex.y/ _HeightScale;
-                o.color.xyz = 
 
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
 			}
 			
@@ -59,14 +53,12 @@
 			{
 				// sample the texture
 				//fixed4 col = tex2D(_MainTex, i.uv);
+
+
                 float2 s = float2(i.uv.x, i.height);
 				fixed4 col = tex2D(_ColorTex, s);
-				//// apply fog
-				//UNITY_APPLY_FOG(i.fogCoord, col);
 
-				//col = i.color;
 				return col;
-				//return i.color;
 			}
 			ENDCG
 		}

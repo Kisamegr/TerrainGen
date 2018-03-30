@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bea7aee8b41604aba17defa3792e6c, type: 3}
+  m_Name: TerrainData
+  m_EditorClassIdentifier: 
+  size: 200
+  heightScale: 40
+  heightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.00292442
+      value: 0.24998474
+      inSlope: -0.045184296
+      outSlope: -0.045184296
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.83643097
+      value: 0.8933036
+      inSlope: 2.1319556
+      outSlope: 2.1319556
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1.0015087
+      value: 0.9979124
+      inSlope: 0.11851325
+      outSlope: 0.11851325
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  offsetX: 0
+  offsetY: 0
+  scale: 3
+  octaves: 5
+  persistense: 0.45
+  lacunarity: 2

@@ -26,13 +26,15 @@ public class WaterGenerator : MonoBehaviour {
     waterMeshRenderer = GetComponent<MeshRenderer>();
     mainCamera = Camera.main;
 
+    waterMesh = new Mesh();
+    waterMeshFilter.mesh = waterMesh;
+
     CreateCameras();
   }
 
   public void Regenerate() {
     waterMeshData = MeshGenerator.GenerateMeshData(World.GetInstance().width, World.GetInstance().length);
-    waterMeshData.CreateMesh(ref waterMesh);
-    waterMeshFilter.mesh = waterMesh;
+    waterMeshData.ApplyToMesh(waterMesh);
   }
 
   public void OnWillRenderObject() {
@@ -45,7 +47,7 @@ public class WaterGenerator : MonoBehaviour {
     Quaternion cameraRoationt = mainCamera.transform.rotation;
 
     // Calculate the main camera to water Y distance, and cache the camera's euler angles
-    float camToWaterDistance  = Mathf.Abs(cameraPosition.y - World.GetInstance().waterLevel);
+    float camToWaterDistance  = Mathf.Abs(cameraPosition.y);
     Vector3 cameraEulerAngles = mainCamera.transform.rotation.eulerAngles;
 
     // Set the reflection camera position under the water, at the same distance Y as the main camera

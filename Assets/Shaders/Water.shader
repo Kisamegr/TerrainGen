@@ -50,10 +50,10 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-                v.vertex.y += cos(v.vertex.x    + _Time.z) * 0.05;
-                v.vertex.y += cos(v.vertex.x/10 + _Time.y) * 0.2;
-                v.vertex.y += sin(v.vertex.z/5  + _Time.x) * 0.1;
-                o.height = v.vertex.y + 0.5;
+                o.height = 0.5;
+                o.height += cos(v.vertex.x    + _Time.z) * 0.05;
+                o.height += cos(v.vertex.x/10 + _Time.y) * 0.2;
+                o.height += sin(v.vertex.z/5  + _Time.x) * 0.1;
 
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
@@ -83,7 +83,7 @@
             
                 float4 col = lerp(reflectionCol, refractionCol, frenselFactor);
             
-                return lerp(col, float4(0.1, 0.5, 1, 1), 0.3);
+                return lerp(col, float4(0.1, 0.5, 1, 1), 0.1);
 			}
 			ENDCG
 		}

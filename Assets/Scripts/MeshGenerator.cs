@@ -57,9 +57,7 @@ public class MeshData {
     triangles = new int[(width - 1) * (length - 1) * 2 * 3];
   }
 
-  public void CreateMesh(ref Mesh mesh) {
-    if (!mesh) mesh = new Mesh();
-
+  public void ApplyToMesh(Mesh mesh) {
     mesh.Clear(true);
     mesh.vertices  = vertices;
     mesh.uv        = uvs;

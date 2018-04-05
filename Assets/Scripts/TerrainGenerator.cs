@@ -17,6 +17,9 @@ public class TerrainGenerator :MonoBehaviour {
   public void Awake() {
     terrainMeshFilter = GetComponent<MeshFilter>();
     terrainMeshRenderer = GetComponent<MeshRenderer>();
+
+    terrainMesh = new Mesh();
+    terrainMeshFilter.mesh = terrainMesh;
   }
 
   public void Regenerate() {
@@ -28,11 +31,17 @@ public class TerrainGenerator :MonoBehaviour {
       heightMapData, terrainData.heightScale, terrainData.heightCurve);
 
     // Create the mesh from the mesh data
-    meshData.CreateMesh(ref terrainMesh);
+    meshData.ApplyToMesh(terrainMesh);
 
-    // Set the mesh and the terrain's Y position based on the water level
-    terrainMeshFilter.mesh = terrainMesh;
-    transform.position = new Vector3(0, -terrainData.heightScale * World.GetInstance().waterLevel, 0);
+    // Update the material and position
+    UpdateTerrain();
+  }
+
+  public void UpdateTerrain() {
+    if (terrainMeshRenderer && terrainData) {
+      terrainData.ApplyToMaterial(terrainMeshRenderer.sharedMaterial);
+      transform.position = new Vector3(0, -terrainData.HeightOffsetScaled, 0);
+    }
   }
 
   void CreateHeightMap() {
@@ -51,8 +60,9 @@ public class TerrainGenerator :MonoBehaviour {
       heightMap.Resize(terrainData.size, terrainData.size);
 
     // Generate the actual texture from the height map and set the material properties
-    TextureGenerator.GenerateTexture(heightMapData, ref heightMap);
-    terrainMeshRenderer.sharedMaterial.SetFloat("_HeightScale", terrainData.heightScale);
-    terrainMeshRenderer.sharedMaterial.mainTexture = heightMap;
+    //TextureGenerator.GenerateTexture(heightMapData, ref heightMap);
+    //terrainMeshRenderer.sharedMaterial.SetFloat("_HeightScale", terrainData.heightScale);
+    //terrainMeshRenderer.sharedMaterial.mainTexture = heightMap;
   }
+
 }

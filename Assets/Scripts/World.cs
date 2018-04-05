@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
-public class World :MonoBehaviour {
+public class World : MonoBehaviour {
 
   [Header("World Properties")]
   public int width         = 10;
   public int length        = 10;
   public int seed;
-  public float waterLevel = 0.15f;
 
   private TerrainGenerator terrainGenerator;
   private WaterGenerator waterGenerator;
-
 
   static World _instance;
   private void Awake() {

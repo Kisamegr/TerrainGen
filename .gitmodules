@@ -1,0 +1,3 @@
+[submodule "Assets/TerrainGenCore"]
+	path = Assets/TerrainGenCore
+	url = https://github.com/Kisamegr/TerrainGenCore.git

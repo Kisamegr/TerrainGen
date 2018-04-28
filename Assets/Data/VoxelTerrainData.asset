@@ -11,21 +11,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bea7aee8b41604aba17defa3792e6c, type: 3}
   m_Name: VoxelTerrainData
   m_EditorClassIdentifier: 
-  size: 200
-  heightOffset: 0.12
-  heightScale: 10
+  autoUpdate: 1
+  size: 100
+  heightOffset: -0.9
+  heightScale: 25.1
   heightCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: -0.051055674
+      outSlope: -0.051055674
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.83643097
+      value: 0.8933036
+      inSlope: 2.1319556
+      outSlope: 2.1319556
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1.0015087
+      value: 0.9979124
+      inSlope: 0.11851325
+      outSlope: 0.11851325
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   textureResolution: 512
   cellSize: 1
-  offsetX: 0
-  offsetY: 0
-  scale: 1
+  heightLayersNumber: 25
+  seed: 0
+  offsetX: 4.66
+  offsetY: 7.56
+  scale: 0.85
   octaves: 4
   persistense: 0.5
   lacunarity: 2
-  layers: []
+  usePosterization: 0
+  posterizeLevel: 4
+  layers:
+  - layerName: Grass
+    albedo: {fileID: 0}
+    normal: {fileID: 0}
+    tintColor: {r: 0, g: 0.5, b: 0.12758613, a: 0}
+    tintBlend: 0
+    textureScale: 0
+    startHeight: 0
+    blendHeight: 0
+  - layerName: Rock
+    albedo: {fileID: 0}
+    normal: {fileID: 0}
+    tintColor: {r: 0.45588237, g: 0.37543252, b: 0.16425173, a: 0}
+    tintBlend: 0
+    textureScale: 0
+    startHeight: 0.182
+    blendHeight: 0
+  - layerName: Rock
+    albedo: {fileID: 0}
+    normal: {fileID: 0}
+    tintColor: {r: 0.45588237, g: 0.37543252, b: 0.16425173, a: 0}
+    tintBlend: 0
+    textureScale: 0
+    startHeight: 0.182
+    blendHeight: 0

@@ -9,48 +9,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8bea7aee8b41604aba17defa3792e6c, type: 3}
-  m_Name: TerrainData
+  m_Name: TerrainData 1
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  size: 100
-  heightOffset: 0.12
-  heightScale: 40
+  size: 64
+  heightOffset: 0
+  heightScale: 32
   heightCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
       time: 0
       value: 0
-      inSlope: -0.051055674
-      outSlope: -0.051055674
+      inSlope: 0.2037157
+      outSlope: 0.2037157
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.83643097
-      value: 0.8933036
+      time: 0.8795828
+      value: 0.7117774
       inSlope: 2.1319556
       outSlope: 2.1319556
       tangentMode: 0
     - serializedVersion: 2
       time: 1.0015087
       value: 0.9979124
-      inSlope: 0.11851325
-      outSlope: 0.11851325
+      inSlope: 1.9305761
+      outSlope: 1.9305761
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   textureResolution: 512
+  useVoxels: 1
   cellSize: 1
-  heightLayersNumber: 20
-  seed: 0
-  offsetX: 44.75
+  heightLayersNumber: 32
+  seed: 56
+  offsetX: 2632
   offsetY: 0
-  scale: 3.56
-  octaves: 5
+  scale: 3
+  octaves: 3
   persistense: 0.45
   lacunarity: 2
   usePosterization: 0
-  posterizeLevel: 4
+  posterizeLevel: 3
   layers:
   - layerName: Rock Underwater
     albedo: {fileID: 2800000, guid: 55b79a05dceedee459e2706b56609964, type: 3}

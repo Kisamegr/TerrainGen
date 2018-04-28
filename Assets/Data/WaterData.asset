@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Name: WaterData
   m_EditorClassIdentifier: 
   resolution: 512
+  width: 200
+  length: 200

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: VoxelTerrainData
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  size: 64
+  size: 32
   heightOffset: 0
-  heightScale: 32
+  heightScale: 16
   heightCurve:
     serializedVersion: 2
     m_Curve:
@@ -48,15 +48,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  normalizeMode: 0
+  normalizeMode: 1
   textureResolution: 512
   useVoxels: 1
   cellSize: 1
-  heightLayersNumber: 32
+  heightLayersNumber: 16
   seed: 56
   offsetX: 2632
   offsetY: 0
-  scale: 3
+  scale: 15
   octaves: 3
   persistense: 0.45
   lacunarity: 2

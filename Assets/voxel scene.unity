@@ -141,11 +141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 1626772606}
-  terrainData: {fileID: 11400000, guid: 4a87ef009e9d66548b2ecdd984ab9f78, type: 2}
+  terrainData: {fileID: 11400000, guid: 3a024e7bd9914c343bd262bcf0895e15, type: 2}
   terrainMaterial: {fileID: 2100000, guid: 93e765634221a094a89e1ec4d0c2e2d5, type: 2}
   lodInfo:
   - lod: 1
+    distance: 50
+  - lod: 2
     distance: 100
+  - lod: 4
+    distance: 400
 --- !u!4 &798073665
 Transform:
   m_ObjectHideFlags: 0

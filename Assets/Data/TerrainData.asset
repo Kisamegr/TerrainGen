@@ -12,41 +12,52 @@ MonoBehaviour:
   m_Name: TerrainData
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  size: 100
+  size: 64
   heightOffset: 0.12
-  heightScale: 40
+  heightScale: 5.5
   heightCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
-      value: 0
+      value: -0.0079574585
       inSlope: -0.051055674
       outSlope: -0.051055674
       tangentMode: 0
-    - serializedVersion: 2
-      time: 0.83643097
-      value: 0.8933036
-      inSlope: 2.1319556
-      outSlope: 2.1319556
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1.0015087
-      value: 0.9979124
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.81083435
+      value: 0.8584572
+      inSlope: 3.2092848
+      outSlope: 2.2682042
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.05203638
+      outWeight: 0.599116
+    - serializedVersion: 3
+      time: 1.0053093
+      value: 1.1209373
       inSlope: 0.11851325
       outSlope: 0.11851325
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  normalizeMode: 1
   textureResolution: 512
+  useVoxels: 0
   cellSize: 1
   heightLayersNumber: 20
   seed: 0
-  offsetX: 44.75
+  offsetX: 0
   offsetY: 0
-  scale: 3.56
-  octaves: 5
+  scale: 15
+  octaves: 4
   persistense: 0.45
   lacunarity: 2
   usePosterization: 0
@@ -90,5 +101,5 @@ MonoBehaviour:
     tintColor: {r: 1, g: 1, b: 1, a: 0}
     tintBlend: 0
     textureScale: 3.95
-    startHeight: 0.713
+    startHeight: 0.832
     blendHeight: 0.314

@@ -12,35 +12,26 @@ MonoBehaviour:
   m_Name: TerrainData
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  size: 64
+  size: 128
   heightOffset: 0.12
-  heightScale: 5.5
+  heightScale: 32.2
   heightCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: -0.0079574585
-      inSlope: -0.051055674
-      outSlope: -0.051055674
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.81083435
-      value: 0.8584572
-      inSlope: 3.2092848
-      outSlope: 2.2682042
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.05203638
-      outWeight: 0.599116
-    - serializedVersion: 3
-      time: 1.0053093
-      value: 1.1209373
-      inSlope: 0.11851325
-      outSlope: 0.11851325
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -54,11 +45,11 @@ MonoBehaviour:
   cellSize: 1
   heightLayersNumber: 20
   seed: 0
-  offsetX: 0
-  offsetY: 0
-  scale: 15
+  offsetX: 4767
+  offsetY: 4841
+  scale: 66.9
   octaves: 4
-  persistense: 0.45
+  persistense: 0.49
   lacunarity: 2
   usePosterization: 0
   posterizeLevel: 4
@@ -99,7 +90,7 @@ MonoBehaviour:
     albedo: {fileID: 2800000, guid: 2e6cac4c5cabe2e4590dc3fdd90337a3, type: 3}
     normal: {fileID: 2800000, guid: 9334a479195640b449dda5792b5c69d3, type: 3}
     tintColor: {r: 1, g: 1, b: 1, a: 0}
-    tintBlend: 0
+    tintBlend: 0.177
     textureScale: 3.95
     startHeight: 0.832
     blendHeight: 0.314

@@ -14,7 +14,7 @@ MonoBehaviour:
   autoUpdate: 1
   size: 32
   heightOffset: 0
-  heightScale: 16
+  heightScale: 32
   heightCurve:
     serializedVersion: 2
     m_Curve:
@@ -28,8 +28,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.8795828
-      value: 0.7117774
+      time: 0.9341158
+      value: 0.5375978
       inSlope: 2.1319556
       outSlope: 2.1319556
       tangentMode: 0
@@ -52,14 +52,14 @@ MonoBehaviour:
   textureResolution: 512
   useVoxels: 1
   cellSize: 1
-  heightLayersNumber: 16
+  heightLayersNumber: 32
   seed: 56
   offsetX: 2632
   offsetY: 0
   scale: 15
   octaves: 3
-  persistense: 0.45
-  lacunarity: 2
+  persistense: 0.91
+  lacunarity: 2.15
   usePosterization: 0
   posterizeLevel: 3
   layers:

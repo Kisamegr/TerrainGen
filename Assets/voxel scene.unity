@@ -239,17 +239,13 @@ MonoBehaviour:
   viewer: {fileID: 1399204256}
   terrainData: {fileID: 11400000, guid: 4a87ef009e9d66548b2ecdd984ab9f78, type: 2}
   terrainMaterial: {fileID: 2100000, guid: 93e765634221a094a89e1ec4d0c2e2d5, type: 2}
-  renderSystem: 0
-  viewerMoveThreshold: 10
   lodInfo:
   - lod: 1
     distance: 200
-  - lod: 2
-    distance: 300
-  - lod: 3
-    distance: 500
-  - lod: 3
-    distance: 2000
+  renderSystem: 0
+  viewerMoveThreshold: 10
+  useColliders: 0
+  colliderDistanceThreshold: 0
 --- !u!4 &798073665
 Transform:
   m_ObjectHideFlags: 0
@@ -280,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1399204253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1626772606
 Transform:
   m_ObjectHideFlags: 0

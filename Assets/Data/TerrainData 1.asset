@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8bea7aee8b41604aba17defa3792e6c, type: 3}
-  m_Name: TerrainData
+  m_Name: TerrainData 1
   m_EditorClassIdentifier: 
   autoUpdate: 1
   size: 128
   heightOffset: 0.12
-  heightScale: 38.54316
+  heightScale: 100
   heightCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.002532959
-      value: -0.06642914
+      time: 0
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -28,17 +28,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.741119
-      value: 0.39295775
-      inSlope: 2.6673784
-      outSlope: 2.6673784
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.09660155
-      outWeight: 0.17388695
-    - serializedVersion: 3
       time: 1
-      value: 1.0036392
+      value: 1
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -53,14 +44,14 @@ MonoBehaviour:
   useVoxels: 0
   cellSize: 1
   heightLayersNumber: 20
-  seed: 30
+  seed: 322
   offsetX: 0
   offsetY: 0
-  scale: 55.9
+  scale: 135.55891
   octaves: 4
-  persistense: 0.45
-  lacunarity: 2.2
-  usePosterization: 1
+  persistense: 0.52536136
+  lacunarity: 2.0738416
+  usePosterization: 0
   posterizeLevel: 4
   layers:
   - layerName: Rock Underwater
@@ -70,36 +61,36 @@ MonoBehaviour:
     tintBlend: 0
     textureScale: 10
     startHeight: 0
-    blendHeight: 0.104
+    blendHeight: 0.029
   - layerName: Sand
     albedo: {fileID: 2800000, guid: 6b2f65821893a4b48a7d91454fb04591, type: 3}
     normal: {fileID: 2800000, guid: 8a12a0c20c9561748a5603a55778bb8b, type: 3}
     tintColor: {r: 0.986207, g: 1, b: 0, a: 0}
     tintBlend: 0.35
-    textureScale: 5.81
+    textureScale: 1.97
     startHeight: 0.107
-    blendHeight: 0.117
+    blendHeight: 0.066
   - layerName: Grass
     albedo: {fileID: 2800000, guid: e6ad15a218cf8bf45a7818053d52af75, type: 3}
     normal: {fileID: 2800000, guid: e4fa8ca3d6058ad42b3b4a1b32c31850, type: 3}
     tintColor: {r: 0, g: 0.3602941, b: 0.09193706, a: 0}
     tintBlend: 0.19
-    textureScale: 5.54
+    textureScale: 2.07
     startHeight: 0.129
-    blendHeight: 0.117
+    blendHeight: 0.065
   - layerName: Rock
     albedo: {fileID: 2800000, guid: 6c0c52c7b4a00794282d5959fc8c0f37, type: 3}
     normal: {fileID: 2800000, guid: e639492e6ff675e4886ab2ecc34e450c, type: 3}
     tintColor: {r: 0.38235295, g: 0.29967785, b: 0.23615918, a: 0}
     tintBlend: 0.579
-    textureScale: 6.51
+    textureScale: 3.41
     startHeight: 0.265
-    blendHeight: 0.35
+    blendHeight: 0.291
   - layerName: Snow
     albedo: {fileID: 2800000, guid: 2e6cac4c5cabe2e4590dc3fdd90337a3, type: 3}
     normal: {fileID: 2800000, guid: 9334a479195640b449dda5792b5c69d3, type: 3}
     tintColor: {r: 1, g: 1, b: 1, a: 0}
     tintBlend: 0.177
-    textureScale: 6.63
+    textureScale: 3.95
     startHeight: 0.832
-    blendHeight: 0.401
+    blendHeight: 0.314

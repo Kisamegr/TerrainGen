@@ -56,10 +56,10 @@ MonoBehaviour:
   seed: 56
   offsetX: 2632
   offsetY: 0
-  scale: 15
+  scale: 82
   octaves: 3
-  persistense: 0.91
-  lacunarity: 2.15
+  persistense: 0.68
+  lacunarity: 2
   usePosterization: 0
   posterizeLevel: 3
   layers:

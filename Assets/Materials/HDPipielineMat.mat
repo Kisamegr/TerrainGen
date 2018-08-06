@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HDPipielineMat
-  m_Shader: {fileID: 4800000, guid: 48bcef06c72f79d42869f83348c2e8c7, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -75,6 +75,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_4621BD77: 0
+    - Vector1_4DE0B846: 0
     - Vector1_806CEE5D: 0
     - Vector1_DD8A2258: 20
     - _BumpScale: 1
@@ -94,5 +96,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_743EEEAF: {r: 0, g: 0, b: 0, a: 0}
+    - Color_C0C8099D: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

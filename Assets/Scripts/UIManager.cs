@@ -163,7 +163,7 @@ public class UIManager : MonoBehaviour {
       ? cameraInitialRotation
       : player.transform.rotation;
 
-    RenderSettings.fog = !terrainEdit;
+    //RenderSettings.fog = !terrainEdit;
 
     if (terrainEdit) { 
       Cursor.lockState = CursorLockMode.None;

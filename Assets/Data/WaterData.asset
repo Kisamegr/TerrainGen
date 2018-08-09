@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7fca53046db10458c136987343a4d7, type: 3}
   m_Name: WaterData
   m_EditorClassIdentifier: 
-  size: 32
-  resolution: 512
+  waterLevelY: -0.5
+  size: 128
+  resolution: 1024

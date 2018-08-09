@@ -47,6 +47,10 @@ public class UIManager : MonoBehaviour {
   public Text lacunarityValue;
 
 
+  private MouseOrbitImproved cameraOrbitScript;
+  private RigidbodyFirstPersonController cameraFirstPersonScript;
+  private Vector3 cameraInitialPosition;
+  private Quaternion cameraInitialRotation;
 
   private bool terrainEdit;
   private World world;
@@ -54,6 +58,11 @@ public class UIManager : MonoBehaviour {
 
   private void Start() {
     world = World.GetInstance();
+    cameraInitialPosition = editCamera.transform.position;
+    cameraInitialRotation = editCamera.transform.rotation;
+    cameraOrbitScript = editCamera.GetComponent<MouseOrbitImproved>();
+    cameraFirstPersonScript = player.GetComponent<RigidbodyFirstPersonController>();
+
     ModeChange(true);
     TerrainTypeChange(world.terrainData.useVoxels ? 1 : 0);
     UpdateUI();
@@ -143,7 +152,17 @@ public class UIManager : MonoBehaviour {
     firstPersonPanel.SetActive(!terrainEdit);
     player.gameObject.SetActive(!terrainEdit);
     player.ResetPosition();
-    editCamera.gameObject.SetActive(terrainEdit);
+    editCamera.transform.parent = terrainEdit ? null : player.transform;
+    cameraOrbitScript.enabled = terrainEdit;
+    cameraFirstPersonScript.enabled = !terrainEdit;
+
+    editCamera.transform.position = terrainEdit 
+      ? cameraInitialPosition 
+      : player.transform.position + new Vector3(0, 0.6f, 0);
+    editCamera.transform.rotation = terrainEdit
+      ? cameraInitialRotation
+      : player.transform.rotation;
+
     RenderSettings.fog = !terrainEdit;
 
     if (terrainEdit) { 
@@ -191,7 +210,6 @@ public class UIManager : MonoBehaviour {
     GameObject lodGameObject = Instantiate(lodLayoutPrefab, lodObjectsPanel);
     LodObject lodObject = lodGameObject.GetComponent<LodObject>();
 
-    Debug.Log(index);
     lodObject.lodValue.value = lodInfo.Lod;
     lodObject.lodText.text = lodInfo.Lod.ToString();
     lodObject.distance.text = lodInfo.Distance.ToString();

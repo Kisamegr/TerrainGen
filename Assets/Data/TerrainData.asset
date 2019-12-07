@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: TerrainData
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  size: 128
+  size: 64
   heightOffset: 0
-  heightScale: 70
+  heightScale: 64
   heightCurve:
     serializedVersion: 2
     m_Curve:
@@ -59,9 +59,9 @@ MonoBehaviour:
     m_RotationOrder: 0
   normalizeMode: 1
   textureResolution: 512
-  useVoxels: 0
+  useVoxels: 1
   cellSize: 1
-  heightLayersNumber: 16
+  heightLayersNumber: 64
   seed: 43
   offsetX: 0
   offsetY: 0
